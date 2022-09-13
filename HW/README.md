@@ -3,10 +3,10 @@
 
 ## Оглавление
 
-[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/HW/blob/main/README.md#1.Краткое-описание-игры-крестики-нолики.)
+[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#1.Краткое-описание-игры-крестики-нолики.)
 
 
-### 1. [Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/HW/blob/main/HW_5.6-Game-tic-tac-toe.py)
+### 1.[Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)
 
 
 **Кре́стики-но́лики** — логическая игра между двумя противниками на квадратном поле 3 на 3 клетки или бо́льшего размера (вплоть до «бесконечного поля»).
@@ -24,5 +24,5 @@
  Координаты должны быть только целые числа в диапазоне от 0 до 2.
  Так же нельзя указывать координаты ячейки, которая уже занята.
  
- :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/HW/blob/main/README.md#Оглавление)
+ :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
  
