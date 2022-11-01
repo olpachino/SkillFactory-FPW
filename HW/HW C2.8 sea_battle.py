@@ -175,10 +175,10 @@ class Board:
 
 class Player:
     """ Player - класс игроков
-        Аргументы: board - доска игрока,
+    Аргументы: board - доска игрока,
                    enemy - доска противника
 
-        Методы: ask - требует переопределения,
+    Методы: ask - требует переопределения,
                 move - ход игрока"""
 
     def __init__(self, board, enemy):  # инициализируем аргументы класса
@@ -201,65 +201,84 @@ class Player:
 
 
 class AI(Player):
+    """ AI - потомок класса Player, описывает Компьютер
+    Методы: ask - рандомный выстрел компьютера"""
     def ask(self):
-        shot = Point(randint(0, 5), randint(0, 5))
+        shot = Point(randint(0, 5), randint(0, 5))  # рандомно берем точку для выстрела
         print("Выстрел компьютера: ({}, {})".format(shot.x + 1, shot.y + 1))
         return shot
 
 
 class User(Player):
+    """ User - потомок класса Player, описывает Пользователя
+    Методы: ask - выстрел пользователя"""
     def ask(self):
         while True:
+            # ввод координат точки Пользователем
             user_input = input('Ваш ход, введите 2 координаты через пробел: ').split()
 
-            if len(user_input) != 2:
+            if len(user_input) != 2:  # проверяем верное количество введенных координат
                 print('Неверное кол-во координат!')
                 continue
 
             try:
+                # отлавливаем ошибку, если ввели не числовое значение координат
                 x, y = int(user_input[0]), int(user_input[1])
             except ValueError as e:
                 print(f'{e} Необходимо ввести 2 числовые координаты')
                 continue
             else:
-                return Point(x - 1, y - 1)
+                return Point(x - 1, y - 1)  # возвращаем точку, уменьшая на 1, так как достка от 0 до 5
 
 
 class Game:
-    def __init__(self, size=6):
+    """ Game - класс самой игры
+    Аргументы: size - размер доски для игры,
+               ai - игрок компьютер,
+               user - игрок пользователь
+
+    Методы: creat_board - создание доски с раставленными кораблями,
+            random_board - исключаем отсутсвие доски,
+            hello - приветствие,
+            gameplay - ход игры,
+            start - запуск приветствия и игры"""
+
+    def __init__(self, size=6):  # инициализация аргументов класса
         self.size = size
-        ai_board = self.random_board(vis=True)
-        user_board = self.random_board()
+        ai_board = self.random_board(vis=True)  # создаем доску для компьютера с невидимыми кораблями
+        user_board = self.random_board()  # создаем доску пользователя
 
         self.ai = AI(ai_board, user_board)
         self.user = User(user_board, ai_board)
 
     def creat_board(self, vis=False):
-        ship_len = [3, 2, 2, 1, 1, 1, 1]
-        board = Board(size=self.size, vis=vis)
-        iteration = 0
-        for l in ship_len:
+        ship_len = [3, 2, 2, 1, 1, 1, 1]  # список длин кораблей для игры
+        board = Board(size=self.size, vis=vis)  # создание доски с нужной видимостью и размером
+        iteration = 0  # считаем количество итераций цикла, чтобы не уйти в вечный цикл
+        for l in ship_len:  # идем по длинам необходимых кораблей
             while True:
                 iteration += 1
-                if iteration > 500:
+                if iteration > 500:  # условие прерывания цикла
                     return None
+                # создаем корабль в произвольной начальной точке, фиксированного размера
+                # с произвольной ориентацией
                 ship = Ship(Point(randint(0, self.size), randint(0, self.size)),
                             l, randint(0, 1))
                 try:
-                    board.add_ship(ship)
+                    board.add_ship(ship)  # ловим ошибки при добавлении корабля
                     break
                 except BoardOutError:
                     pass
                 except PointUsedError:
                     pass
 
-        board.begin()
+        board.begin()  # после постройки кораблей, обновляем список занятых точек
         return board
 
     def random_board(self, vis=False):
         board = None
         while board is None:
-            board = self.creat_board(vis=vis)
+            board = self.creat_board(vis=vis)  # чтобы при игре всегда была верно построена доска
 
         return board
 
@@ -274,43 +293,43 @@ class Game:
         print(' ----------------------------')
 
     def gameplay(self):
-        step = 0
+        step = 0  # шаг игры, необходим для определения хода игроков
         while True:
             print(' ----------------------------')
             print('  Поле пользовател:')
-            print(self.user.board)
+            print(self.user.board)  # печатаем доску Пользователя
             print(' ----------------------------')
             print('  Поле компьютера:')
-            print(self.ai.board)
+            print(self.ai.board)  # печатаем доску компьютера
 
-            if step % 2 == 0:
+            if step % 2 == 0:  # первый ход Пользователя
                 print('Ход игрока:')
                 repeat = self.user.move()
             else:
                 print('Ход компьютера:')
                 repeat = self.ai.move()
 
-            if repeat:
+            if repeat: # проверка повторного хода, если True игрок снова ходит
                 step -= 1
 
-            if self.ai.board.count == len(self.ai.board.ships):
+            if self.ai.board.count == len(self.ai.board.ships):  # определение выигрыша Пользователя
                 print(' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print('  ПОЗДРАВЛЯЕМ! ВЫ ПОБЕДИЛИ!  ')
                 print(' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 break
 
-            if self.user.board.count == len(self.user.board.ships):
+            if self.user.board.count == len(self.user.board.ships):  # определение выигрыша Компьютера
                 print(' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print('   УВЫ! ПОБЕДИЛ КОМПЬЮТОР    ')
                 print(' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 break
 
-            step += 1
+            step += 1  # переход хода другому игроку
 
     def start(self):
-        self.hello()
-        self.gameplay()
+        self.hello()  # вызов приветствия
+        self.gameplay()  # вызов игровой механики
 
 
-g = Game()
-g.start()
+g = Game()  # создание класса Игра
+g.start()  # запуск Игры
