@@ -9,7 +9,7 @@
 
 ## 1.[Домашние задания.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/)
 
-В разделе [HW](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/) держатся документы по выполненным Домашним заданиям.
+В разделе [HW](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/) coдержатся документы по выполненным Домашним заданиям.
 
 
  :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/README.md#Оглавление) 
