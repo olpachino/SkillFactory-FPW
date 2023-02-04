@@ -1,0 +1,1 @@
+<img src="https://img.shields.io/badge/python-3.9.13-green.svg">  <img src="https://img.shields.io/badge/pyTelegramBotAPI-4.9.0-green.svg">  <img src="https://img.shields.io/badge/requests-2.28.1-green.svg">  <img src="https://img.shields.io/badge/JSON- -green.svg">
