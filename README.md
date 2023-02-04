@@ -4,7 +4,7 @@
 
 ## Оглавление
 
-[1. Домашние задания по курсу](https://github.com/olpachino/SkillFactory-FPW/blob/main/README.md#1.Домашние-задания.)
+[1. Домашние задания по курсу](https://github.com/olpachino/SkillFactory-FPW/blob/main/README.md#1.Домашние-задания.)  
 [2. Проекты по курсу](https://github.com/olpachino/SkillFactory-FPW/blob/main/README.md#2.Проекты.)
 
 
