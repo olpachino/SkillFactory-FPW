@@ -35,7 +35,8 @@
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/python-3.9.13-green.svg">    <img src="https://img.shields.io/badge/pyTelegramBotAPI-4.9.0-green.svg">    <img src="https://img.shields.io/badge/requests-2.28.1-green.svg">    <img src="https://img.shields.io/badge/JSON-1.3.0-green.svg">
- </p>
+ </p>   
+ 
 3. Данные о курсе валют собираются через [API](https://www.cbr.ru/lk_uio/guide/rest_api/) с [сайта Центрального Банка РФ](https://www.cbr.ru/). Реализация выполнена в статическом методе `get_price` в файле [extensions.py](https://github.com/olpachino/SkillFactory-FPW/blob/main/Projects/Telegram_bot/extensions.py)
 4. Все классы вынесены в отдельный файл [extensions.py](https://github.com/olpachino/SkillFactory-FPW/blob/main/Projects/Telegram_bot/extensions.py)
 5. Все константы описаны в файле [config.py](https://github.com/olpachino/SkillFactory-FPW/blob/main/Projects/Telegram_bot/config.py)
