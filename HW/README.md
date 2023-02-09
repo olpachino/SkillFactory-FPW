@@ -3,7 +3,7 @@
 
 ## Оглавление
 
-[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#1.Краткое-описание-игры-крестики-нолики.)
+[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#1.Краткое-описание-игры-крестики-нолики.)  
 [2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#2.Краткое-описание-игры-морской-бой.)
 
 
