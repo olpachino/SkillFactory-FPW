@@ -4,7 +4,8 @@
 ## Оглавление
 
 [1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#1.Краткое-описание-игры-крестики-нолики.)  
-[2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#2.Краткое-описание-игры-морской-бой.)
+[2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#2.Краткое-описание-игры-морской-бой.)  
+[3. HW-D1 Первый проект на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#2.Краткое-описание-первого-проекта-на-Django.)
 
 
 ### 1.[Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)
@@ -47,5 +48,20 @@
  Последовательно вводятся данные координат x и y, через пробел (x - номер строки, y - номер столбца). Первым начинает Пользователь. Игра против компьютера.
  Координаты должны быть только целые числа в диапазоне от 1 до 6.
  Так же нельзя указывать координаты ячейки, которая уже занята.
+ 
+ :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
+ 
+### 2.[Краткое описание первого проекта на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)
+
+
+**Что было сделано:**
+
+1. Создан проект Django.
+2. Добавлены в него 3 статические странички.
+3. На одной из страниц контент повторяется 2 раза без изменения content (два раза прописано `{{ flatpage.content }}`).
+4. Одна из страниц на сайте доступна только админу (только вошедшему пользователю).
+5. На одной из страниц изменены шрифты и размеры текста.
+6. Сайт представляет собой оформленный Bootstrap-шаблон со встроенными пользовательскими данными.
+7. Статические файлы Bootstrap загружаются через тег `{% load static %}`.
  
  :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
