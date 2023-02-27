@@ -3,12 +3,12 @@
 
 ## Оглавление
 
-[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##1.Краткое-описание-игры-крестики-нолики.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)  
-[2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##2.Краткое-описание-игры-морской-бой.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)  
-[3. HW-D1 Первый проект на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##3.Краткое-описание-первого-проекта-на-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)  
-[4. HW-D2 Базы данных и Модели в Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##4.Краткое-описание-базы-данных-и-Модели-в-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)  
+[1. HW-5.6 Игра в Крестики-Нолики.](#HW1)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)  
+[2. HW-C2.8 Игра Морской бой.](#HW2)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)  
+[3. HW-D1 Первый проект на Django.](#HW3)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)  
+[4. HW-D2 Базы данных и Модели в Django.](#HW4)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)  
 
-### 1.[Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)
+### <a name="HW1"></a>	1. [Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)
 
 
 **Кре́стики-но́лики** — логическая игра между двумя противниками на квадратном поле 3 на 3 клетки или бо́льшего размера (вплоть до «бесконечного поля»).
@@ -28,7 +28,7 @@
  
  :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
  
- ### 2.[Краткое описание игры морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)
+ ### <a name="HW2"></a> 2. [Краткое описание игры морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)
 
 
 **Морской бой** —  игра для двух участников, в которой игроки по очереди называют координаты на неизвестной им карте соперника. Если у соперника по этим координатам имеется корабль (координаты заняты), то корабль или его часть «топится», а попавший получает право сделать ещё один ход. Цель игрока — первым потопить все корабли противника.
@@ -51,7 +51,7 @@
  
  :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
  
-### 3.[Краткое описание первого проекта на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)
+### <a name="HW3"></a> 3. [Краткое описание первого проекта на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)
 
 
 **Что было сделано:**
@@ -66,7 +66,7 @@
  
  :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
  
- ### 4.[Краткое описание базы данных и Модели в Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)
+ ### <a name="HW4"></a> 4. [Краткое описание базы данных и Модели в Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)
 
 
 **Что было сделано:**
