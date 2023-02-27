@@ -3,10 +3,10 @@
 
 ## Оглавление
 
-[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#1.Краткое-описание-игры-крестики-нолики.)  
-[2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#2.Краткое-описание-игры-морской-бой.)  
-[3. HW-D1 Первый проект на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#3.Краткое-описание-первого-проекта-на-Django.)
-
+[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#1.Краткое-описание-игры-крестики-нолики.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)  
+[2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#2.Краткое-описание-игры-морской-бой.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)  
+[3. HW-D1 Первый проект на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#3.Краткое-описание-первого-проекта-на-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)  
+[4. HW-D2 Базы данных и Модели в Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#3.Краткое-описание-базы-данных-и-Модели-в-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)  
 
 ### 1.[Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)
 
@@ -63,5 +63,43 @@
 5. На одной из страниц изменены шрифты и размеры текста.
 6. Сайт представляет собой оформленный Bootstrap-шаблон со встроенными пользовательскими данными.
 7. Статические файлы Bootstrap загружаются через тег `{% load static %}`.
+ 
+ :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
+ 
+ ### 4.[Краткое описание базы данных и Модели в Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)
+
+
+**Что было сделано:**
+
+*1. Модель Author*  
+  >Модель, содержащая объекты всех авторов.  
+  >Имеет следующие поля:  
+     * cвязь «один к одному» с встроенной моделью пользователей User;  
+     * рейтинг пользователя. Ниже будет дано описание того, как этот рейтинг можно посчитать.  
+*2. Модель Category*  
+  >Категории новостей/статей — темы, которые они отражают (спорт, политика, образование и т. д.).  
+  >Имеет единственное поле: название категории. Поле должно быть уникальным (в определении поля необходимо написать параметр unique = True).  
+*3. Модель Post*  
+  >Эта модель должна содержать в себе статьи и новости, которые создают пользователи. Каждый объект может иметь одну или несколько категорий.  
+  >Соответственно, модель должна включать следующие поля:  
+     * связь «один ко многим» с моделью Author;  
+     * поле с выбором — «статья» или «новость»;  
+     * автоматически добавляемая дата и время создания;  
+     * связь «многие ко многим» с моделью Category (с дополнительной моделью PostCategory);  
+     * заголовок статьи/новости;  
+     * текст статьи/новости;  
+     * рейтинг статьи/новости.  
+*4. Модель PostCategory*  
+  >Промежуточная модель для связи «многие ко многим»:  
+     * связь «один ко многим» с моделью Post;  
+     * связь «один ко многим» с моделью Category.  
+*5. Модель Comment*  
+  >Под каждой новостью/статьёй можно оставлять комментарии, поэтому необходимо организовать их способ хранения тоже.  
+  >Модель будет иметь следующие поля:  
+     * связь «один ко многим» с моделью Post;  
+     * связь «один ко многим» со встроенной моделью User (комментарии может оставить любой пользователь, необязательно автор);  
+     * текст комментария;  
+     * дата и время создания комментария;  
+     * рейтинг комментария.  
  
  :arrow_up:[к оглавлению](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#Оглавление)
