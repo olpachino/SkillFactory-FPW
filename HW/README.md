@@ -3,10 +3,10 @@
 
 ## Оглавление
 
-[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#1.Краткое-описание-игры-крестики-нолики.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)  
-[2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#2.Краткое-описание-игры-морской-бой.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)  
-[3. HW-D1 Первый проект на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#3.Краткое-описание-первого-проекта-на-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)  
-[4. HW-D2 Базы данных и Модели в Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md#3.Краткое-описание-базы-данных-и-Модели-в-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)  
+[1. HW-5.6 Игра в Крестики-Нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##1.Краткое-описание-игры-крестики-нолики.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)  
+[2. HW-C2.8 Игра Морской бой.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##2.Краткое-описание-игры-морской-бой.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)  
+[3. HW-D1 Первый проект на Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##3.Краткое-описание-первого-проекта-на-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)  
+[4. HW-D2 Базы данных и Модели в Django.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/README.md##4.Краткое-описание-базы-данных-и-Модели-в-Django.)  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)  
 
 ### 1.[Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)
 
