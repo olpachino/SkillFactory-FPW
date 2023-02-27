@@ -3,10 +3,10 @@
 
 ## Оглавление
 
-[1. HW-5.6 Игра в Крестики-Нолики.](#HW1)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)  
-[2. HW-C2.8 Игра Морской бой.](#HW2)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)  
-[3. HW-D1 Первый проект на Django.](#HW3)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)  
-[4. HW-D2 Базы данных и Модели в Django.](#HW4)    [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)  
+[1. HW-5.6 Игра в Крестики-Нолики.](#HW1)  |  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)  
+[2. HW-C2.8 Игра Морской бой.](#HW2)  |  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW-C2.8-sea_battle.py)  
+[3. HW-D1 Первый проект на Django.](#HW3)  |  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/project_test)  
+[4. HW-D2 Базы данных и Модели в Django.](#HW4)  |  [ссылка на работу](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/NewsPortal)  
 
 ### <a name="HW1"></a>	1. [Краткое описание игры крестики-нолики.](https://github.com/olpachino/SkillFactory-FPW/blob/main/HW/HW_5.6-Game-tic-tac-toe.py)
 
