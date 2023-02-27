@@ -1,0 +1,71 @@
+# Импорт моделей из приложения new
+from news.models import *
+
+# Создаем Пользователей
+us1 = User.objects.create_user(username='Teodor')
+us2 = User.objects.create_user(username='Sofia')
+
+# Создаем Авторов
+au1 = Author.objects.create(user=us1)
+au2 = Author.objects.create(user=us2)
+
+# Создаем категории Статей/Новостей
+Category.objects.create(name='sport')
+Category.objects.create(name='design')
+Category.objects.create(name='IT')
+Category.objects.create(name='beauty')
+
+# Создаем Посты
+p1 = Post.objects.create(position='AR', author=au2, title='My new article', text='Византия. Ночь перед великим сражением с противником. Византийская армия состоит из n легионов, каждым из которых командует свой генерал. Также у армии есть главнокомандующий, которому подчиняются генералы. В то же самое время империя находится в упадке, и любой из генералов и даже главнокомандующий могут быть предателями Византии, заинтересованными в её поражении. Ночью каждый из генералов получает от главнокомандующего приказ, как надлежит поступить в 10 часов утра (время одинаковое для всех и известно заранее). Варианты приказа: «атаковать противника» или «отступать». Возможные исходы сражения: Если все верные генералы атакуют — Византия уничтожит противника (благоприятный исход). Если все верные генералы отступят — Византия сохранит свою армию (промежуточный исход). Если некоторые верные генералы атакуют, а некоторые отступят — противник со временем по частям уничтожит всю армию Византии (неблагоприятный исход). Также следует учитывать, что если главнокомандующий — предатель, то он может дать разным генералам противоположные приказы, чтобы обеспечить уничтожение армии. Следовательно, генералам надо учитывать такую возможность и не допускать несогласованных действий. Если же каждый генерал будет действовать полностью независимо от других (например, сделает случайный выбор), то вероятность благоприятного исхода весьма низка. Поэтому генералы нуждаются в обмене информацией между собой, чтобы прийти к единому решению.')
+p2 = Post.objects.create(position='NW', author=au2, title='Today news', text='Был отличный день и победил Зенит')
+p3 = Post.objects.create(position='AR', author=au1, title='New Photoshop', text='Прорыв в дизайне, создан новый Photoshop с встроенным ИИ.')
+
+# Добавляем категории к Постам
+p1.category.add(Category.objects.get(id=3))
+p2.category.add(Category.objects.get(id=1))
+p3.category.add(Category.objects.get(id=3))
+p3.category.add(Category.objects.get(id=2))
+
+# Добавляем комментарии к Постам
+Comment.objects.create(post=p3, user=us1, text='Дождались')
+Comment.objects.create(post=p1, user=us1, text='Очень интересно, но ничего не понятно')
+Comment.objects.create(post=p2, user=us2, text='А вид спорта какой?')
+Comment.objects.create(post=p3, user=us2, text='Давно пора')
+
+# Применение метода like и dislike к Постам и Комментариям
+p3.like()
+Comment.objects.get(id=1).like()
+Comment.objects.get(id=1).like()
+Comment.objects.get(id=2).like()
+Comment.objects.get(id=3).like()
+Comment.objects.get(id=3).like()
+Comment.objects.get(id=3).like()
+Comment.objects.get(id=4).like()
+Comment.objects.get(id=2).dislike()
+Comment.objects.get(id=2).dislike()
+p1.like()
+p1.like()
+p2.like()
+p2.like()
+p2.dislike()
+p2.dislike()
+p3.like()
+p3.like()
+p3.like()
+p3.like()
+p3.dislike()
+
+# Обновляем рейтинги Авторов
+Author.objects.get(id=1).update_rating()
+Author.objects.get(id=2).update_rating()
+
+# Лучший Автор
+a1 = Author.objects.order_by('-rating').first()
+a1.user.username, a1.rating
+
+# Лучшая статья
+p1 = Post.objects.order_by('-rating').first()
+p1.date, p1.author.user.username, p1.rating, p1.title, p1.preview()
+
+# Все комментарии
+Comment.objects.all().values('date', 'user', 'rating', 'text')
