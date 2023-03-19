@@ -19,11 +19,19 @@ class Author(models.Model):
         
         self.rating = posts_rating*3 + comments_rating + posts_comments_rating  # вычисляем итоговый рейтинг
         self.save()  # фиксируем изменение
+    
+
+    def __str__(self):
+        return f'{self.user.username}'
 
 
 # Описание модели Категория статьи / новости
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)  # название категории имеет уникальное значение
+
+
+    def __str__(self):
+        return f'{self.name}'
 
 
 # Описание модели Статья / Новость
@@ -58,6 +66,10 @@ class Post(models.Model):
     # метот вывода первых 124 символов Статьи/Новости
     def preview(self):
         return f'{self.text[0:123]} ...'
+    
+
+    def __str__(self):
+        return f'{self.title} - {self.text[:128]}'
 
 
 # Описение модели для связи Категории и Статьи/Новости
@@ -85,3 +97,7 @@ class Comment(models.Model):
     def dislike(self):
         self.rating -= 1  # уменьшение рейтинга осуществляется на 1 за каждый dislike
         self.save()
+
+    
+    def __str__(self):
+        return f'{self.user.username}: {self.text[:24]}'

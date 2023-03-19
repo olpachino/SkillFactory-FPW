@@ -1,0 +1,46 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+
+{% load custom_filters %}
+
+
+<!-- Название у нас будет Posts -->
+{% block title %}
+<h1 class="masthead-heading mb-0">Все статьи</h1>
+<h2>Количество: {{ posts|length }}</h2>
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все посты -->
+{% block content %}
+<!-- <div class="col-lg-6"> -->
+    <div class="p-5">
+        <!-- Выводим статьи, только если они есть с помощью тега if -->
+        {% if posts %}
+        <table width="720" cellpadding="10" cellspacing="5">
+            <tr>
+                <td width="150"><b>Заголовок</b></td>
+                <td><b>Дата публикации</b></td>
+                <td width="400"><b>Текст</b></td>
+            </tr>    
+            <!-- Для каждой статьи будете генерироваться новая строчка,
+            т.е. новый HTML код, который указан в теле цикла. -->
+            {% for post in posts %}
+            <tr>
+                <!-- Не забываем, что переменные в шаблоне ничем не отличаются
+                от переменных в Python. Здесь также можно получать доступ к
+                полям объекта модели. Например, здесь мы выводим имя,
+                в следующем столбце описание, и т.д.  -->
+                <td>{{ post.title|censor }}</td>
+                <td>{{ post.date|date:'d M Y' }}</td>
+                <td>{{ post.text|truncatewords:20|censor }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+        {% else %}
+            <h2>Статей нет!</h2>
+        {% endif %}
+    </div>
+<!-- </div> -->
+{% endblock content %}
